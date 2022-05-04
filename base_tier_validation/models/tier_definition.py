@@ -34,14 +34,23 @@ class TierDefinition(models.Model):
         string="Validated by", default="individual",
         selection=[
             ("individual", "Specific user"),
-            ("group", "Any user in a specific group."),
-        ]
+            ("group", "Any user in a specific group"),
+            ("field", "Field in related record")
+        ],
     )
     reviewer_id = fields.Many2one(
         comodel_name="res.users", string="Reviewer",
     )
     reviewer_group_id = fields.Many2one(
         comodel_name="res.groups", string="Reviewer group",
+    )
+    reviewer_field_id = fields.Many2one(
+        comodel_name="ir.model.fields", string="Reviewer field",
+        domain="[('id', 'in', valid_reviewer_field_ids)]",
+    )
+    valid_reviewer_field_ids = fields.One2many(
+        comodel_name="ir.model.fields",
+        compute="_compute_domain_reviewer_field",
     )
     definition_type = fields.Selection(
         string="Definition",
@@ -58,6 +67,20 @@ class TierDefinition(models.Model):
         default=lambda self: self.env["res.company"]._company_default_get(
             "tier.definition"),
     )
+    notify_on_create = fields.Boolean(
+        string="Notify Reviewers on Creation",
+        help="If set, all possible reviewers will be notified by email when "
+             "this definition is triggered."
+    )
+    has_comment = fields.Boolean(
+        string='Comment',
+        default=False,
+    )
+    approve_sequence = fields.Boolean(
+        string='Approve by sequence',
+        default=False,
+        help="Approval order by the specified sequence number",
+    )
 
     @api.onchange('model_id')
     def onchange_model_id(self):
@@ -69,3 +92,9 @@ class TierDefinition(models.Model):
     def onchange_review_type(self):
         self.reviewer_id = None
         self.reviewer_group_id = None
+
+    @api.depends("review_type", "model_id")
+    def _compute_domain_reviewer_field(self):
+        for rec in self:
+            rec.valid_reviewer_field_ids = self.env["ir.model.fields"].search(
+                [("model", "=", rec.model), ("relation", "=", "res.users")])
