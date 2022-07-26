@@ -1,14 +1,15 @@
 
 [![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/server-ux&target_branch=13.0)
-[![Build Status](https://travis-ci.com/OCA/server-ux.svg?branch=13.0)](https://travis-ci.com/OCA/server-ux)
+[![Pre-commit Status](https://github.com/OCA/server-ux/actions/workflows/pre-commit.yml/badge.svg?branch=13.0)](https://github.com/OCA/server-ux/actions/workflows/pre-commit.yml?query=branch%3A13.0)
+[![Build Status](https://github.com/OCA/server-ux/actions/workflows/test.yml/badge.svg?branch=13.0)](https://github.com/OCA/server-ux/actions/workflows/test.yml?query=branch%3A13.0)
 [![codecov](https://codecov.io/gh/OCA/server-ux/branch/13.0/graph/badge.svg)](https://codecov.io/gh/OCA/server-ux)
 [![Translation Status](https://translation.odoo-community.org/widgets/server-ux-13-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/server-ux-13-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
 
-# Server UX
+# server-ux
 
-Server side features for usability and user experience related
+TODO: add repo description.
 
 <!-- /!\ do not modify below this line -->
 
@@ -32,12 +33,12 @@ addon | version | maintainers | summary
 [base_tier_validation](base_tier_validation/) | 13.0.1.8.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Implement a validation process based on tiers.
 [base_tier_validation_formula](base_tier_validation_formula/) | 13.0.1.2.0 |  | Formulas for Base tier validation
 [base_tier_validation_forward](base_tier_validation_forward/) | 13.0.1.1.1 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Forward option for base tiers
-[base_user_locale](base_user_locale/) | 13.0.1.1.0 |  | User Locale Settings
-[chained_swapper](chained_swapper/) | 13.0.1.0.0 |  | Chained Swapper
+[base_user_locale](base_user_locale/) | 13.0.1.1.1 |  | User Locale Settings
+[chained_swapper](chained_swapper/) | 13.0.1.0.1 |  | Chained Swapper
 [date_range](date_range/) | 13.0.1.0.2 | [![lmignon](https://github.com/lmignon.png?size=30px)](https://github.com/lmignon) | Manage all kind of date range
 [default_multi_user](default_multi_user/) | 13.0.1.0.1 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Allows to share user-defined defaults among several users.
 [document_quick_access](document_quick_access/) | 13.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Document quick access
-[document_quick_access_folder_auto_classification](document_quick_access_folder_auto_classification/) | 13.0.2.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Auto classification of Documents after reading a QR
+[document_quick_access_folder_auto_classification](document_quick_access_folder_auto_classification/) | 13.0.2.1.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Auto classification of Documents after reading a QR
 [filter_multi_user](filter_multi_user/) | 13.0.1.0.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Allows to share user-defined filters filters among several users.
 [mass_editing](mass_editing/) | 13.0.1.2.0 |  | Mass Editing
 [mass_operation_abstract](mass_operation_abstract/) | 13.0.1.1.2 |  | Abstract Tools used for modules that realize operation onmany items
