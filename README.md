@@ -1,14 +1,15 @@
 
 [![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/server-ux&target_branch=14.0)
-[![Build Status](https://travis-ci.com/OCA/server-ux.svg?branch=14.0)](https://travis-ci.com/OCA/server-ux)
+[![Pre-commit Status](https://github.com/OCA/server-ux/actions/workflows/pre-commit.yml/badge.svg?branch=14.0)](https://github.com/OCA/server-ux/actions/workflows/pre-commit.yml?query=branch%3A14.0)
+[![Build Status](https://github.com/OCA/server-ux/actions/workflows/test.yml/badge.svg?branch=14.0)](https://github.com/OCA/server-ux/actions/workflows/test.yml?query=branch%3A14.0)
 [![codecov](https://codecov.io/gh/OCA/server-ux/branch/14.0/graph/badge.svg)](https://codecov.io/gh/OCA/server-ux)
 [![Translation Status](https://translation.odoo-community.org/widgets/server-ux-14-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/server-ux-14-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
 
-# server-ux
+# Server UX
 
-None
+Server side features for usability and user experience related.
 
 <!-- /!\ do not modify below this line -->
 
@@ -21,7 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [barcode_action](barcode_action/) | 14.0.1.0.1 |  | Allows to use barcodes as a launcher
-[base_cancel_confirm](base_cancel_confirm/) | 14.0.1.0.3 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Base Cancel Confirm
+[base_cancel_confirm](base_cancel_confirm/) | 14.0.1.1.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Base Cancel Confirm
 [base_custom_filter](base_custom_filter/) | 14.0.1.0.0 | [![AshishHirapara](https://github.com/AshishHirapara.png?size=30px)](https://github.com/AshishHirapara) [![ForgeFlow](https://github.com/ForgeFlow.png?size=30px)](https://github.com/ForgeFlow) | Add custom filters in standard filters and group by dropdowns
 [base_export_manager](base_export_manager/) | 14.0.1.0.1 |  | Manage model export profiles
 [base_import_security_group](base_import_security_group/) | 14.0.1.0.0 |  | Group-based permissions for importing CSV files
@@ -31,7 +32,8 @@ addon | version | maintainers | summary
 [base_search_custom_field_filter](base_search_custom_field_filter/) | 14.0.1.1.1 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Add custom filters for fields via UI
 [base_substate](base_substate/) | 14.0.1.0.0 |  | Base Sub State
 [base_technical_features](base_technical_features/) | 14.0.1.1.1 |  | Access to technical features without activating debug mode
-[base_tier_validation](base_tier_validation/) | 14.0.2.11.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Implement a validation process based on tiers.
+[base_tier_validation](base_tier_validation/) | 14.0.2.12.1 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Implement a validation process based on tiers.
+[base_tier_validation_correction](base_tier_validation_correction/) | 14.0.1.0.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Correct tier.review data after it has been created.
 [base_tier_validation_formula](base_tier_validation_formula/) | 14.0.2.0.1 |  | Formulas for Base tier validation
 [base_tier_validation_forward](base_tier_validation_forward/) | 14.0.1.0.2 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Forward option for base tiers
 [base_tier_validation_report](base_tier_validation_report/) | 14.0.1.1.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Reports related to tier validation
@@ -42,9 +44,9 @@ addon | version | maintainers | summary
 [date_range_account](date_range_account/) | 14.0.1.0.0 | [![alexis-via](https://github.com/alexis-via.png?size=30px)](https://github.com/alexis-via) | Add Date Range menu entry in Invoicing app
 [default_multi_user](default_multi_user/) | 14.0.1.0.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Allows to share user-defined defaults among several users.
 [document_quick_access](document_quick_access/) | 14.0.1.0.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Document quick access
-[document_quick_access_folder_auto_classification](document_quick_access_folder_auto_classification/) | 14.0.2.1.0 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Auto classification of Documents after reading a QR
+[document_quick_access_folder_auto_classification](document_quick_access_folder_auto_classification/) | 14.0.2.1.1 | [![etobella](https://github.com/etobella.png?size=30px)](https://github.com/etobella) | Auto classification of Documents after reading a QR
 [filter_multi_user](filter_multi_user/) | 14.0.1.0.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Allows to share user-defined filters filters among several users.
-[mass_editing](mass_editing/) | 14.0.1.1.1 |  | Mass Editing
+[mass_editing](mass_editing/) | 14.0.1.1.2 |  | Mass Editing
 [mass_operation_abstract](mass_operation_abstract/) | 14.0.1.0.2 |  | Abstract Tools used for modules that realize operation on many items
 [multi_step_wizard](multi_step_wizard/) | 14.0.1.0.0 |  | Multi-Steps Wizards
 [sequence_check_digit](sequence_check_digit/) | 14.0.1.0.2 |  | Adds a check digit on sequences
