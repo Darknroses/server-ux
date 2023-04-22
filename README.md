@@ -21,7 +21,8 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[barcode_action](barcode_action/) | 14.0.1.0.1 |  | Allows to use barcodes as a launcher
+[barcode_action](barcode_action/) | 14.0.1.0.2 |  | Allows to use barcodes as a launcher
+[base_action_visibility_restriction](base_action_visibility_restriction/) | 14.0.1.0.0 | [![JordiMForgeFlow](https://github.com/JordiMForgeFlow.png?size=30px)](https://github.com/JordiMForgeFlow) [![CetmixGitDrone](https://github.com/CetmixGitDrone.png?size=30px)](https://github.com/CetmixGitDrone) | Restrict (with groups) action visibilty
 [base_cancel_confirm](base_cancel_confirm/) | 14.0.1.1.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Base Cancel Confirm
 [base_custom_filter](base_custom_filter/) | 14.0.1.0.0 | [![AshishHirapara](https://github.com/AshishHirapara.png?size=30px)](https://github.com/AshishHirapara) [![ForgeFlow](https://github.com/ForgeFlow.png?size=30px)](https://github.com/ForgeFlow) | Add custom filters in standard filters and group by dropdowns
 [base_export_manager](base_export_manager/) | 14.0.1.0.1 |  | Manage model export profiles
@@ -29,15 +30,17 @@ addon | version | maintainers | summary
 [base_menu_visibility_restriction](base_menu_visibility_restriction/) | 14.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Restrict (with groups) menu visibilty
 [base_optional_quick_create](base_optional_quick_create/) | 14.0.1.0.0 |  | Avoid "quick create" on m2o fields, on a "by model" basis
 [base_revision](base_revision/) | 14.0.1.1.0 |  | Keep track of revised document
+[base_rule_visibility_restriction](base_rule_visibility_restriction/) | 14.0.1.0.0 | [![GuillemCForgeFlow](https://github.com/GuillemCForgeFlow.png?size=30px)](https://github.com/GuillemCForgeFlow) | Exclude Record Rules for certain groups
 [base_search_custom_field_filter](base_search_custom_field_filter/) | 14.0.1.1.1 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Add custom filters for fields via UI
 [base_substate](base_substate/) | 14.0.1.0.0 |  | Base Sub State
 [base_technical_features](base_technical_features/) | 14.0.1.1.1 |  | Access to technical features without activating debug mode
-[base_tier_validation](base_tier_validation/) | 14.0.2.12.2 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Implement a validation process based on tiers.
-[base_tier_validation_correction](base_tier_validation_correction/) | 14.0.1.0.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Correct tier.review data after it has been created.
+[base_tier_validation](base_tier_validation/) | 14.0.2.12.5 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Implement a validation process based on tiers.
+[base_tier_validation_correction](base_tier_validation_correction/) | 14.0.1.0.1 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Correct tier.review data after it has been created.
 [base_tier_validation_formula](base_tier_validation_formula/) | 14.0.2.0.1 |  | Formulas for Base tier validation
 [base_tier_validation_forward](base_tier_validation_forward/) | 14.0.1.0.2 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Forward option for base tiers
 [base_tier_validation_report](base_tier_validation_report/) | 14.0.1.1.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Reports related to tier validation
 [base_tier_validation_server_action](base_tier_validation_server_action/) | 14.0.1.1.3 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Add option to call server action when a tier is validated
+[base_tier_validation_waiting](base_tier_validation_waiting/) | 14.0.1.0.0 |  | Base Tier Validation Extension to add waiting status
 [base_user_locale](base_user_locale/) | 14.0.1.1.1 |  | User Locale Settings
 [chained_swapper](chained_swapper/) | 14.0.1.0.1 |  | Chained Swapper
 [date_range](date_range/) | 14.0.2.1.1 | [![lmignon](https://github.com/lmignon.png?size=30px)](https://github.com/lmignon) | Manage all kind of date range

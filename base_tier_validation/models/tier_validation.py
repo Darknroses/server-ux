@@ -81,18 +81,15 @@ class TierValidation(models.AbstractModel):
 
     @api.model
     def _search_can_review(self, operator, value):
-        res_ids = (
-            self.search(
-                [
-                    ("review_ids.reviewer_ids", "=", self.env.user.id),
-                    ("review_ids.status", "=", "pending"),
-                    ("review_ids.can_review", "=", True),
-                    ("rejected", "=", False),
-                ]
-            )
-            .filtered("can_review")
-            .ids
-        )
+        domain = [
+            ("review_ids.reviewer_ids", "=", self.env.user.id),
+            ("review_ids.status", "=", "pending"),
+            ("review_ids.can_review", "=", True),
+            ("rejected", "=", False),
+        ]
+        if "active" in self._fields:
+            domain.append(("active", "in", [True, False]))
+        res_ids = self.search(domain).filtered("can_review").ids
         return [("id", "in", res_ids)]
 
     @api.depends("review_ids")
@@ -237,21 +234,13 @@ class TierValidation(models.AbstractModel):
         ) in (self._state_to + [self._cancel_state])
 
     def write(self, vals):
-        new_self = self
-        if (
-            "from_review_systray" in self.env.context
-            and "active_test" in self.env.context
-        ):
-            context = self.env.context.copy()
-            context.pop("active_test")
-            new_self = self.with_context(context)
-        for rec in new_self:
+        for rec in self:
             if rec._check_state_conditions(vals):
                 if rec.need_validation:
                     # try to validate operation
                     reviews = rec.request_validation()
                     rec._validate_tier(reviews)
-                    if not new_self._calc_reviews_validated(reviews):
+                    if not self._calc_reviews_validated(reviews):
                         pending_reviews = reviews.filtered(
                             lambda r: r.status == "pending"
                         ).mapped("name")
@@ -274,13 +263,12 @@ class TierValidation(models.AbstractModel):
                 rec.review_ids
                 and rec._check_tier_state_transition(vals)
                 and not rec._check_allow_write_under_validation(vals)
+                and not rec._context.get("skip_validation_check")
             ):
                 raise ValidationError(_("The operation is under validation."))
-        if vals.get(new_self._state_field) in (
-            new_self._state_from + [new_self._cancel_state]
-        ):
-            new_self.mapped("review_ids").unlink()
-        return super(TierValidation, new_self).write(vals)
+        if vals.get(self._state_field) in (self._state_from + [self._cancel_state]):
+            self.mapped("review_ids").unlink()
+        return super(TierValidation, self).write(vals)
 
     def _check_state_conditions(self, vals):
         self.ensure_one()

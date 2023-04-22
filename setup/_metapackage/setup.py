@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo14-addon-barcode_action',
+        'odoo14-addon-base_action_visibility_restriction',
         'odoo14-addon-base_cancel_confirm',
         'odoo14-addon-base_custom_filter',
         'odoo14-addon-base_export_manager',
@@ -16,6 +17,7 @@ setuptools.setup(
         'odoo14-addon-base_menu_visibility_restriction',
         'odoo14-addon-base_optional_quick_create',
         'odoo14-addon-base_revision',
+        'odoo14-addon-base_rule_visibility_restriction',
         'odoo14-addon-base_search_custom_field_filter',
         'odoo14-addon-base_substate',
         'odoo14-addon-base_technical_features',
@@ -25,6 +27,7 @@ setuptools.setup(
         'odoo14-addon-base_tier_validation_forward',
         'odoo14-addon-base_tier_validation_report',
         'odoo14-addon-base_tier_validation_server_action',
+        'odoo14-addon-base_tier_validation_waiting',
         'odoo14-addon-base_user_locale',
         'odoo14-addon-chained_swapper',
         'odoo14-addon-date_range',
